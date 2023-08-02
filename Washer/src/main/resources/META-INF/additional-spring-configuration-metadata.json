@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "maxConnectionIdleTime",
+    "type": "java.lang.String",
+    "description": "A description for 'maxConnectionIdleTime'"
+  },
+  {
+    "name": "connectionsPerHost",
+    "type": "java.lang.String",
+    "description": "A description for 'connectionsPerHost'"
+  },
+  {
+    "name": "minConnectionsPerHost",
+    "type": "java.lang.String",
+    "description": "A description for 'minConnectionsPerHost'"
+  },
+  {
+    "name": "socketTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'socketTimeout'"
+  },
+  {
+    "name": "spring.data.mongodb.urimongodb+srv",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.urimongodb+srv'"
+  }
+]}

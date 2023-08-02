@@ -1,0 +1,29 @@
+server:
+  port: 8008
+
+spring:
+  application:
+     name: APIGATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+      - id: Customer-Service
+        uri: http://localhost:8081/
+        predicates:
+        - Path=/customer/**
+      - id: Washer-Service
+        uri: http://localhost:8082/
+        predicates:
+        - Path=/washer/**
+      - id: Admin-Service
+        uri: http://localhost:8083/
+        predicates:
+        - Path=/admin/**
+      - id: Order-Service
+        uri: http://localhost:8084/
+        predicates:
+        - Path=/order/**
+      - id: Payment-Service
+        uri: http://localhost:8085/
+        predicates:
+        - Path=/payment/**
