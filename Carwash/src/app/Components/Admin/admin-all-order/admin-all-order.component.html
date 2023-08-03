@@ -1,0 +1,32 @@
+<!-- <p>admin-all-order works!</p> -->
+
+<h1 class="heading"><i>All Order Details</i></h1>
+<div class="table-responsive mx-auto">
+    <table class="table table-striped table-hover mx-auto w-auto">
+        <thead> 
+            <tr cla>
+              <th scope="col">UserId</th>
+              <th scope="col">CarName</th>
+              <th scope="col">CarModel</th>
+              <th scope="col">WashPlan</th>
+              <th scope="col">Date</th>
+              <th scope="col">PhoneNo</th>
+              <th scope="col">Action</th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tab" *ngFor="let user of orderDetails; let i=index;">
+              <th style="color: white;" scope="row">{{user.orderId}}</th>
+              <td style="color: white;"> {{user.carName | uppercase }} </td>
+              <td style="color: white;"> {{user.carModel | uppercase }} </td>
+              <td style="color: white;">  {{user.wName}} </td>
+              <td style="color: white;">  {{user.date}}  </td>
+              <td style="color: white;"> {{user.phoneNo}} </td>
+               <td>
+                 <button class="btn btn-danger" (click)="deleteOrder(user.orderId)"><i class="bi bi-trash-fill"></i> DELETE</button>
+              </td>  
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,54 @@
+.wrapper{
+    background-image: url(/assets/images/login1.jpg);
+    background-size: cover;
+    padding: 20px;
+  }
+  
+  .signupForm{
+      width: 40%;
+      margin: auto;
+      margin-top:20px;
+      margin-bottom: 60px;;
+      padding: 40px;
+      /* background-color: rgba(128, 128, 128, 0.178); */
+      background: hsla(205, 46%, 30%, 1);
+      background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%,hsla(260, 29%, 36%, 1) 100%);
+      border: 15px solid rgba(128, 128, 128, 0.178);
+    
+    }
+    
+    
+    #heading{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px;
+        display: block;
+        margin: auto;
+        /* color: rgba(119, 117, 117, 0.178); */
+        color: white;
+        text-shadow: 2px 1px rgba(119, 117, 117, 0.178);
+        filter: brightness(80%);
+        
+    }
+    
+    #icon{
+      text-align: center;
+    }
+    
+    #userIcon{
+      font-size: 5em;
+      color: black;
+      padding: 20px;
+    }
+    
+    
+    .message{
+      background-color: rgb(9, 151, 9);
+      padding: 7px;
+      font-size: 18px;
+      margin-top: 30px;
+      border-radius: 5px;
+      text-align: center;
+      color: white;
+    }

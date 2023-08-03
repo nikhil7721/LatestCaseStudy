@@ -1,0 +1,27 @@
+<div class="wrapper">
+
+    <!-- Banner image -->
+    <div class="banner-img">
+   
+    </div>
+    <!-- heading -->
+    <div class="heading">
+        <p style="background: linear-gradient(40deg, hsla(205, 46%, 30%, 1) 0%,hsla(260, 29%, 36%, 1) 100%); color: white;"><b>Plans we offers</b></p>
+    </div>
+
+    <!-- serviceplans -->
+    <div class="container">
+        <div class="item" *ngFor="let service of services">
+            <!-- <div class="title bg-secondary">
+                <p>{{service.wpName | uppercase}}</p>
+            </div> -->
+            <div class="body">
+                <p> {{service.wpDes}} </p>
+            </div>
+            <div class="foot" >
+                <span class="cost text">Cost : <b>₹</b> {{service.wpCost}}</span>
+            </div>
+        </div>
+        
+    </div>
+</div>

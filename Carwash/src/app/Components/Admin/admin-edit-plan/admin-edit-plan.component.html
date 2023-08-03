@@ -1,0 +1,34 @@
+<!-- <p>admin-edit-plan works!</p> -->
+<div class="wrapper">
+    <div class="heading">EDIT PLAN</div> 
+    <form *ngIf="plan.length!=0" #editPlanForm="ngForm" (ngSubmit) ="updatePlan(editPlanForm)" class="plan" ngNativeValidate>
+        <div class="form-group">
+            <label for="id">Id</label>
+            <input type="text" class="form-control" id="id" name="id" [ngModel]="plan[0].id" required maxlength="3">
+          </div>
+      
+        <div class="form-group">
+          <label for="name">WashpackName</label>
+          <input type="text" class="form-control" id="wpName" name="wpName" [ngModel]="plan[0].wpName" required>
+          <small class="text-danger">{{nameError}}</small>
+        </div>
+    
+        <div class="form-group">
+            <label for="cost">Cost</label>
+            <input type="number" class="form-control" name="wpCost" id="wpCost" [ngModel]="plan[0].wpCost" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="wpDes" name="wpDes" rows="3" [ngModel]="plan[0].wpDes" required></textarea>
+        </div>
+    
+    
+        <button type="submit" class="btn btn-warning" (click)= "updatecon()">UPDATE</button> &nbsp;
+        <button type="button" class="btn btn-secondary" (click)="cancel()">BACK</button>
+    
+        <div *ngIf="showMsg" class="message">
+            {{message}}
+        </div>
+      </form>
+    </div>

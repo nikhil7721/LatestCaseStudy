@@ -1,0 +1,36 @@
+<div class="d-flex" id="wrapper"  [ngClass]="status ? 'toggled' : '' " >
+    
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">MENU</div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light" routerLink ="customerHome">
+              <i class="bi bi-house-door-fill"></i><b> Home</b></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="customerOrder">
+              <i><img src="/assets/images/book.png" style="width: 12%;"></i><b> Book a Wash</b></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="customerProfile">
+              <i><img src="/assets/images/Washpack.png" style="width: 12%;"></i><b> Check Plans</b></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="customerRating">
+              <i><img src="/assets/images/Washpack.png" style="width: 12%;"></i><b> Give Rating</b></a>    
+              
+        </div>
+      </div>
+    
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn" id="menu-toggle" (click) = "toggleClass()">
+                <img src="/assets/images/bar-icon.png" style="width: 20px;background-color: white;">
+            </button>
+
+            <i><img src="/assets/images/customer.png" style="width: 50px; margin-left: 400px;"><b>customer</b></i>
+        </nav>
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+     
+</div>

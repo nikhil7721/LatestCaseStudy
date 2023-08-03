@@ -1,0 +1,22 @@
+<div class="heading">Check WashPacks</div> <br>
+
+<div class="table-responsive mb-4"> 
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let plan of plans[0]; let i= index">
+        <th scope="row">{{i+1}}</th>
+        <td> {{plan.wpName}} </td>
+        <td> ₹{{plan.wpCost}} </td>
+        <td> {{plan.wpDes}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

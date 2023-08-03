@@ -1,0 +1,90 @@
+<div class="wrapper">
+    <span id="heading">
+      <img src="/assets/images/signup-icon-13.jpg" style="width: 150px; filter: brightness(180%);">
+      <!-- <b><i>Sign Up Now</i></b> -->
+    </span>
+    <div class="signupForm">
+        <div id="icon">
+          <!-- <fa-icon id="userIcon" [icon]="user"></fa-icon> -->
+          <!-- <i class="bi bi-person-fill"></i> -->
+          <img src="/assets/images/user1.png" style="width: 120px;">
+        </div>
+       
+        <!-- Form -->
+        <form #signupForm="ngForm" (ngSubmit) = "register(signupForm)" ngNativeValidate>
+    
+    
+            <!-- ID INPUT --> 
+            <!-- <div class="form-group mb-3">
+              <label for="text" class="form-label" style="color: white;">Userid:</label>
+              <input type="text" class="form-control" id="id" name="id" placeholder="Create your userid  (example - abc12)" ngModel required minlength="2" maxlength="5">
+              <small class="text-danger" > {{idError}}</small> 
+            </div> -->
+    
+            
+          <!-- NAME INPUT --> 
+          <div class="form-group mb-3">
+            <label for="text" class="form-label" style="color: white;">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" ngModel required minlength="4" maxlength="10">
+            <small class="text-danger" > {{nameError}}</small> 
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="text" class="form-label" style="color: white;">Username:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your username" ngModel required minlength="4" maxlength="15">
+            <small class="text-danger" > {{usernameError}}</small> 
+          </div>
+    
+          
+          <!-- PHONE INPUT --> 
+          <div class="form-group mb-3">
+            <label for="phone" class="form-label" style="color: white;">Phone:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" ngModel required minlength="10" maxlength="11">
+            <small class="text-danger" > {{phoneError}}</small> 
+          </div>
+             
+            <!-- EMAIL INPUT --> 
+            <div class="form-group mb-3">
+              <label for="email" class="form-label" style="color: white;">Email address:</label>
+              <input type="email" class="form-control" id="email" name ="email" placeholder="Enter your email address" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+              <small class="text-danger" > {{emailError}}</small> 
+            </div>
+    
+              
+          <!-- ADDRESS INPUT --> 
+          <div class="form-group mb-3">
+            <label for="text" class="form-label" style="color: white;">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" ngModel required minlength="5" maxlength="15" >
+            <small class="text-danger" > {{addressError}}</small> 
+          </div>
+    
+            <!-- PASSWORD INPUT --> 
+            <div class="form-group mb-3">
+              <label for="password" class="form-label" style="color: white;">Password:</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" ngModel required minlength="4" maxlength="8">
+             <small class="text-danger"> {{passwordError}}</small> 
+              <!-- <div class="input-group-append">
+                <span class="input-group-text"><a #textpass (click)="showpass(pass,textpass)">Show</a></span>
+              </div>   -->
+            </div>
+    
+            <!-- ROLE INPUT --> 
+            <div class="form-group mb-3">
+              <label for="role" class="form-label" style="color: white;">Who are you? (Select One)</label>
+              <select class="form-select" id="role" name="role" [(ngModel)]="selected" required >
+                <option value="Customer">Customer</option>
+                <option value="Washer">Washer</option>
+              </select>
+            </div>
+           
+            <button type="submit" class="btn btn-primary" style="color: white;">Create Account</button> &nbsp;
+            <div>
+            <small style="color: white;">Already have an account? <a role="button" routerLink='/login'>Login</a></small>
+            </div>
+        </form>
+         
+        <div *ngIf= "showMessage" class="message">
+          <p>{{succcessMsg}}</p>
+        </div>
+    </div>
+    </div>

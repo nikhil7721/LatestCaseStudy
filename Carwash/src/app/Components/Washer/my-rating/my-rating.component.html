@@ -1,0 +1,22 @@
+<!-- <p>my-rating works!</p> -->
+<h1 class="heading">All Rating Details</h1>
+<div class="table-responsive mx-auto">
+    <table class="table table-striped table-hover mx-auto w-auto">
+        <thead>
+            <tr>
+              <th scope="col">UserId</th>
+              <th scope="col">Status</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Review other</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of details; let i=index;">
+              <th scope="row">{{user.washerId}}</th>
+              <td>  {{user.status}} </td>
+              <td> {{user.rating}} </td>
+              <td> {{user.review}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

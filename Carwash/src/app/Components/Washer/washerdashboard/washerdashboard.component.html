@@ -1,0 +1,31 @@
+<div class="d-flex" id="wrapper"  [ngClass]="status ? 'toggled' : '' " >
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">MENU</div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" routerLink ="washerHome"><i class="bi bi-house-door-fill"></i><b> Home</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="myOrder">
+            <i><img src="/assets/images/order.png" style="width: 23px;"></i><b> My Orders</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="myRatings">
+            <i class="bi bi-star-fill"></i><b> See Rating</b></a>   
+      </div>
+    </div>
+    
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn" id="menu-toggle" (click) = "toggleClass()">
+                <img src="/assets/images/bar-icon.png" style="width: 20px;background-color: white;">
+            </button>
+
+            <i><img src="/assets/images/car-wash.png" style="width: 50px; margin-left: 400px;"><b>Washer</b></i>
+        </nav>
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+     
+</div>

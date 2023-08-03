@@ -1,0 +1,42 @@
+.wrapper{
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.178);
+}
+
+/* Heading */
+.heading{
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+}
+.order{
+    width: 60%;
+    margin: auto;
+    margin-top:40px;
+    margin-bottom: 40px;;
+    padding: 40px;
+    /* background-color: rgba(128, 128, 128, 0.178); */
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%,hsla(260, 29%, 36%, 1) 100%);
+    border: 15px solid rgba(128, 128, 128, 0.178);
+}
+form{
+    width: 70%;
+    margin: auto;
+}
+
+label{
+    font-size: 22px;
+    color: #007bff;
+}
+
+.message{
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    font-size: large;
+    background-color: rgb(17, 161, 17);
+}

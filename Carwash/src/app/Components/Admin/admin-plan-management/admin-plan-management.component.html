@@ -1,0 +1,33 @@
+<!-- <p>admin-plan-management works!</p> -->
+<div class="heading">Service Plans Management</div> <br>
+
+  <button class="btn btn-success float-right mb-3" routerLink="../createPlan">CREATE NEW PLAN</button>
+
+
+<div class="table-responsive mb-4"> 
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <!-- <th scope="col">No.</th> -->
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let plan of plans[0]; let i= index">
+        <!-- <th scope="row">{{i+1}}</th> -->
+        <td>  {{plan.id}}       </td>
+        <td> {{plan.wpName}} </td>
+        <td> ₹{{plan.wpCost}} </td>
+        <td> {{plan.wpDes}} </td>
+        <td>
+          <button class="btn btn-warning" style="width: 60px; font-size: small;" [routerLink]="['../editPlan', plan.id]">EDIT</button> &nbsp;
+          <button class="btn btn-danger"  style="width: 60px; font-size: small;" (click)="deletePlan(plan.id)" (click)="deletecon()" ><i class="bi bi-trash-fill"></i> DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

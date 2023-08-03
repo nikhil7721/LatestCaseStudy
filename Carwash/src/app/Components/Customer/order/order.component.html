@@ -1,0 +1,61 @@
+<div class="wrapper">
+    <div class="order">
+        <h1 class="heading"><i>ORDER A WASH</i></h1>
+        <form #orderForm="ngForm" (ngSubmit)="submitOrder(orderForm)" ngNativeValidate>
+
+        
+            <!-- OrderId Input -->
+            <!-- <div class="form-group mb-3">
+                <label for="text" class="form-label">UserId:</label>
+                <input type="text" class="form-control" id="orderId" name="orderId" placeholder="Enter your Id" ngModel required> -->
+                <!-- <small class="text-danger" > {{idError}}</small>  -->
+            <!-- </div> -->
+
+            <!-- CarName INPUT --> 
+            <div class="form-group mb-3">
+                <label for="text" class="form-label">Car Name:</label>
+                <input type="text" class="form-control" id="carName" name="carName" placeholder="Enter your car name" ngModel required>
+                <!-- <small class="text-danger" > {{nameError}}</small>  -->
+             </div>
+
+            <!-- CarModel INPUT --> 
+            <div class="form-group mb-3">
+                <label for="text" class="form-label">Car Model:</label>
+                <input type="text" class="form-control" id="carModel" name="carModel" placeholder="Enter your car model" ngModel required>
+                <!-- <small class="text-danger" > {{nameError}}</small>  -->
+            </div>
+
+            <!-- WashPack INPUT -->
+            <div class="form-group mb-3">
+                <label for="wName">Wash Package: </label>
+                <select name="wName" id="wName" placeholder="Choose Package" ngModel required>
+                    <option value="ONLY EXTERIOR CLEANING">ONLY EXTERIOR CLEANING</option>
+                    <option value="ONLY INTERIOR CLEANING">ONLY INTERIOR CLEANING</option>
+                    <option value="INTERIOR & EXTERIOR CLEANING">INTERIOR & EXTERIOR CLEANING</option>
+                    <option value="COMPLETE CAR CARE PACKAGE">COMPLETE CAR CARE PACKAGE</option>
+                </select>
+            </div>
+  
+            <!-- select date -->
+            <div class="form-group mb-3" >
+                <label for="date">Date:</label>
+                <input class="form-control" type="date" id="date" name="date" ngModel required>
+            </div>
+            <br>
+
+            <!-- PhoneNumber Input -->
+            <div class="form-group mb-3">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phoneNo" name="phoneNo" placeholder="Enter your phone number" ngModel required>
+            </div>
+
+
+        
+        
+            <div *ngIf="showMsg" class="float-left " class="message">
+                    {{successMsg}}      
+            </div>
+            <button  class="btn btn-primary m-3 float-right" (click)="confirmation()">SUBMIT ORDER</button>
+        </form>
+    </div>
+</div>

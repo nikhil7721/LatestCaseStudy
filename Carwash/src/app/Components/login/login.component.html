@@ -1,0 +1,54 @@
+<div class="banner">
+    <span id="heading">
+      <!-- <b>Login Now</b> -->
+      <img src="/assets/images/login-lock.png" style="width: 190px; filter: brightness(150%);">
+    </span>
+    <div class="loginForm">
+      <div id="icon">
+        <!-- <fa-icon id="userIcon" [icon]="user"></fa-icon> -->
+        <!-- <i class="bi bi-person-fill"></i> -->
+        <img src="/assets/images/user1.png" style="width: 120px;">
+    
+      </div>
+     
+      <!-- Form -->
+      <form #loginForm="ngForm" (ngSubmit) = "formSubmit()" ngNativeValidate>
+           
+          <!-- EMAIL INPUT --> 
+         
+          <div class="form-group mb-3">
+            <label for="username" class="form-label" style="color: white;"><b>username</b></label>
+            <!-- <input type="username" class="form-control" id="email" name ="email" placeholder="Enter your email address" ngModel required  /> -->
+            <input [(ngModel)]="logindataCustomer.username" required name="username" matInput placeholder="Enter Here"
+            type="text">
+            <small class="text-danger" > {{emailError}}</small> 
+          </div>
+    
+          <!-- PASSWORD INPUT --> 
+          <div class="form-group mb-3">
+            <label for="password" class="form-label" style="color: white;"><b>Password</b></label>
+            <!-- <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" ngModel required maxlength="10" minlength="4">  -->
+            <input [(ngModel)]="logindataCustomer.password" required name="password" type="password" matInput
+                        placeholder="Enter Here">
+            <small class="text-danger"> {{passwordError}}</small> 
+            <!-- <div class="input-group-append">
+              <span class="input-group-text"><a #textpass (click)="showpass(x,text)">Show</a></span>
+            </div>    -->
+          </div>
+           <!-- ROLE INPUT --> 
+           <div class="form-group mb-3">
+            <label for="role" class="form-label" style="color: white;"><b>Who are you? <span>(Select One)</span></b></label>
+            <select class="form-select"  id="role" name="role" [(ngModel)]="selected" required >
+              <option value="Customer">Customer</option>
+              <option value="Washer">Washer</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Login</button> &nbsp;
+         <!-- <button type="button" class="btn btn-danger" (click)="googleLogin()"> 
+           <fa-icon [icon]="googleIcon"></fa-icon> -->
+           <!-- <i  class="bi bi-google"></i> Log in with Google
+          </button>   -->
+      </form>
+    </div>
+    </div>

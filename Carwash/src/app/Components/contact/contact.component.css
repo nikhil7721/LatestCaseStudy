@@ -1,0 +1,21 @@
+/* Contact info */
+.heading{
+    font-size: 60px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+.container{
+    padding-bottom: 50px;
+    background-color: rgba(128, 128, 128, 0.178);
+}
+
+.container .col-sm-5{
+    padding-top: 100px;
+}
+.container .row{
+    padding: 10px;
+    font-size: 18px;
+}

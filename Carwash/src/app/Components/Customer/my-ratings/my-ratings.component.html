@@ -1,0 +1,42 @@
+<!-- <p>my-ratings works!</p> -->
+<div class="wrapper">
+    <div class="order">
+        <h1 class="heading"><i>Give Review</i></h1>
+        <form #ratingForm="ngForm" (ngSubmit)="submitRating(ratingForm)" ngNativeValidate>
+
+        
+            <!-- UserId Input -->
+            <div class="form-group mb-3">
+                <label for="text" class="form-label">Id:</label>
+                <input type="text" class="form-control" id="washerId" name="washerId" placeholder="Enter your Id" ngModel required>
+            </div>
+
+            <!-- Status INPUT -->
+            <div class="form-group mb-3">
+                <label for="status">Wash Status: </label>
+                <select name="status" id="status" placeholder="Give Status" ngModel required>
+                    <option value="Complete">Complete</option>
+                    <option value="Incomplete">Incomplete</option>
+                </select>
+            </div>
+
+            <!-- Rating INPUT --> 
+            <div class="form-group mb-3">
+                <label for="text" class="form-label">Rating:</label>
+                <input type="text" class="form-control" id="rating" name="rating" placeholder="Give Rating between (0 To 10)" ngModel required>
+                <!-- <small class="text-danger" > {{nameError}}</small>  -->
+             </div>
+
+             <!-- Review INPUT --> 
+            <div class="form-group mb-3">
+                <label for="text" class="form-label">Other:</label>
+                <input type="text" class="form-control" id="review" name="review" placeholder="Enter your Other " ngModel>
+             </div>
+        
+            <div *ngIf="showMsg" class="float-left " class="message">
+                    {{successMsg}}      
+            </div>
+            <button  class="btn btn-primary m-3 float-right">SUBMIT</button>
+        </form>
+    </div>
+</div>
